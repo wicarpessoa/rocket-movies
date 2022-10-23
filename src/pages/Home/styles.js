@@ -11,6 +11,8 @@ export const Container = styled.div`
   > main {
     padding: 40px 0;
     grid-area: content;
+    overflow-y: auto;
+
   }
 `;
 
@@ -23,7 +25,7 @@ export const Content = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
-  .heading {
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;

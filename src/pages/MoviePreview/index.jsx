@@ -1,9 +1,12 @@
 import { Container, Content } from "./styles";
 import { ArrowLeft, Clock } from "phosphor-react";
 
+import { Link } from "react-router-dom";
+
 import { ButtonText } from "../../components/ButtonText";
 import { Header } from "../../components/Header";
 import { Tag } from "../../components/Tag";
+import { MovieRate } from "../../components/MovieRate";
 
 export function MoviePreview() {
   return (
@@ -11,9 +14,14 @@ export function MoviePreview() {
       <Header />
       <main>
         <Content>
-          <ButtonText icon={ArrowLeft} title="voltar" />
+          <Link to="/">
+            <ButtonText icon={ArrowLeft} title="voltar" />
+          </Link>
           <div className="scrollable">
-            <h1>Interstellar</h1>
+            <header>
+              <h1>Interstellar</h1>
+              <MovieRate rate={4} size={20} />
+            </header>
             <div className="details">
               <img
                 src="https://github.com/wicarpessoa.png"

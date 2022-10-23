@@ -29,7 +29,7 @@ export const Profile = styled.div`
   align-items: center;
 
   margin-left: 64px;
-  > img {
+  > a img {
     width: 56px;
     height: 56px;
     border-radius: 50%;

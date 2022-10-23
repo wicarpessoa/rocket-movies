@@ -7,6 +7,7 @@ import { Button } from "../../components/Button";
 import { MovieNote } from "../../components/MovieNote";
 import { MovieRate } from "../../components/MovieRate";
 import { Tag } from "../../components/Tag";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const tags = ["Ação", "Drama", "Família"];
@@ -15,12 +16,14 @@ export function Home() {
       <Header />
       <main>
         <Content>
-          <div className="heading">
+          <header>
             <h1>Meus Filmes</h1>
-            <Button title="Adicionar Filme" icon={Plus} />
-          </div>
+            <Link to="/new">
+              <Button title="Adicionar Filme" icon={Plus} />
+            </Link>
+          </header>
           <MoviesNotes>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={2} size={12} />
               <p>
@@ -64,7 +67,7 @@ export function Home() {
                 })}
               </div>
             </MovieNote>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={3} size={12} />
               <p>
@@ -108,7 +111,7 @@ export function Home() {
                 })}
               </div>
             </MovieNote>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={3} size={12} />
               <p>
@@ -152,7 +155,7 @@ export function Home() {
                 })}
               </div>
             </MovieNote>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={3} size={12} />
               <p>
@@ -196,7 +199,7 @@ export function Home() {
                 })}
               </div>
             </MovieNote>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={3} size={12} />
               <p>
@@ -240,7 +243,7 @@ export function Home() {
                 })}
               </div>
             </MovieNote>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={3} size={12} />
               <p>
@@ -284,7 +287,7 @@ export function Home() {
                 })}
               </div>
             </MovieNote>
-            <MovieNote>
+            <MovieNote to="/details/1">
               <h2>Interstellar</h2>
               <MovieRate rate={3} size={12} />
               <p>

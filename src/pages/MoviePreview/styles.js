@@ -10,6 +10,7 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     padding: 40px 0;
+    overflow-y: auto;
   }
 `;
 
@@ -39,6 +40,13 @@ export const Content = styled.div`
     }
     ::-webkit-scrollbar-thumb:hover {
       background: ${({ theme }) => theme.COLORS.PINK_600};
+    }
+
+    header {
+      display: flex;
+      margin-top: 24px;
+      align-items: center;
+      gap: 20px;
     }
 
     .tags {
@@ -75,7 +83,6 @@ export const Content = styled.div`
     font-size: 36px;
     font-weight: 500;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
-    margin-top: 24px;
   }
   p {
     color: ${({ theme }) => theme.COLORS.GRAY_100};
