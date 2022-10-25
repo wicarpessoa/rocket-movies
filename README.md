@@ -4,7 +4,7 @@
 Create your movies notes and share with people.
 
 
-## Instalação
+## Installation
 
 Install dependencies
 
@@ -22,11 +22,11 @@ To run the project
   npm run dev
 ```
 
-## Documentação de cores
+## Colors Documentation
 
 | Cor               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
-| GRAY_800    | ![#312E38](https://via.placeholder.com/10/312E38?text=+)  |
+| GRAY_800    | ![#312E38](https://via.placeholder.com/10/312E38)  |
 | GRAY_700    | ![#3E3B47](https://via.placeholder.com/10/3E3B47?text=+) #3E3B47 |
 | GRAY_600    | ![#999591](https://via.placeholder.com/10/999591?text=+) #999591 |
 | GRAY_500    | ![#948F99](https://via.placeholder.com/10/948F99?text=+) #948F99 |
