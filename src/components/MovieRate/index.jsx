@@ -11,7 +11,6 @@ export function MovieRate({ rate, size = 16 }) {
   }
   return (
     <Container>
-      {console.log(listRates)}
       {listRates.map((rate, index) => {
         return <Star key={index} weight={rate} size={size} />;
       })}

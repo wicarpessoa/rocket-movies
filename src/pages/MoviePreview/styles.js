@@ -22,6 +22,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
+  .buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
   .scrollable {
     display: flex;
     flex-direction: column;

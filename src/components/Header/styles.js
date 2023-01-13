@@ -41,10 +41,13 @@ export const Profile = styled.div`
     margin-right: 16px;
     line-height: 24px;
 
-    span {
+    span> button {
+      border: none;
+      background-color: transparent;
       font-size: 14px;
       color: ${({ theme }) => theme.COLORS.GRAY_500};
       align-self: end;
+      cursor: pointer;
     }
     strong {
       font-size: 14px;

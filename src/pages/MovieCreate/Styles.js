@@ -58,7 +58,6 @@ export const MarkerContainer = styled.div`
   gap: 24px;
 
   width: 100%;
-  height: 88px;
 
   border-radius: 8px;
 

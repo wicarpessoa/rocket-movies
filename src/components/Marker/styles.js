@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   gap: 16px;
-  height: 56px;
   padding: 16px;
-
+  height: auto;
+  flex-wrap: wrap;
   border-radius: 10px;
 
   color: ${({ theme }) => theme.COLORS.WHITE};

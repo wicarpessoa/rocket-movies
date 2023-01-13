@@ -17,6 +17,11 @@ export const Container = styled.div`
 
     padding: 0 124px;
 
+    button {
+      border:none;
+      background-color: transparent;
+    }
+
     svg {
       color: ${({ theme }) => theme.COLORS.GRAY_500};
       font-size: 20px;
