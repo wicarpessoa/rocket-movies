@@ -38,7 +38,7 @@ export function MoviePreview() {
   useEffect(() => {
     async function fetchNote() {
       const response = await api.get(`/notes/${params.id}`);
-      console.log(response.data)
+      console.log(response.data.tags)
       setData(response.data);
     }
     fetchNote();
@@ -67,7 +67,7 @@ export function MoviePreview() {
               </div>
               <div className="tags">
                 {data.tags.map((tag) => {
-                  <Tag key={tag.id} title={tag.name} size={8} />;
+                  return <Tag key={tag.id} title={tag.name} size={8} />;
                 })}
               </div>
 
