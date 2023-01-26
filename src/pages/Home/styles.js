@@ -46,7 +46,7 @@ export const MoviesNotes = styled.div`
   padding: 20px 16px 32px 0;
   margin-top: 20px;
 
-  overflow-y: auto;
+  // overflow-y: auto;
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -60,4 +60,5 @@ export const MoviesNotes = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => theme.COLORS.PINK_600};
   }
+  
 `;

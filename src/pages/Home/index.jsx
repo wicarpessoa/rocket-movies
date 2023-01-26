@@ -15,7 +15,7 @@ import { api } from "../../services/api";
 export function Home() {
   const [search, setSearch] = useState("");
   const [notes, setNotes] = useState([]);
-  const tags = ["Ação", "Drama", "Família"];
+  const [tags, setTags] = useState(["wwwww","wwwww","www"]);
 
   useEffect(() => {
     async function fetchNotes() {
@@ -37,15 +37,16 @@ export function Home() {
           </header>
           <MoviesNotes>
             {notes.map((note) => {
+              console.log(note)
               return (
                 <MovieNote key={note.id} to={`/details/${note.id}`}>
                   <h2>{note.title}</h2>
                   <MovieRate rate={note.rating} size={12} />
                   <p>{note.description}</p>
                   <div className="tags">
-                    {tags.map((tag, index) => {
+                    {note.tags.map((tag, index) => {
                       return (
-                        <Tag key={index} title={tag} noteTag={true} size={6} />
+                        <Tag key={tag.id} title={tag.name} noteTag={true} size={6} />
                       );
                     })}
                   </div>

@@ -1,7 +1,10 @@
 import { Container, Content } from "./styles";
 import { ArrowLeft, Clock } from "phosphor-react";
 
-import { Link, useNavigate, useParams } from "react-router-dom";
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
+
+
+import {  useNavigate, useParams } from "react-router-dom";
 import { ButtonText } from "../../components/ButtonText";
 import { Header } from "../../components/Header";
 import { Tag } from "../../components/Tag";
@@ -17,7 +20,7 @@ export function MoviePreview() {
 
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
-    : avatarPlaceHolder;
+    : avatarPlaceholder;
 
   function handleGoBack() {
     navigate(-1)
@@ -35,6 +38,7 @@ export function MoviePreview() {
   useEffect(() => {
     async function fetchNote() {
       const response = await api.get(`/notes/${params.id}`);
+      console.log(response.data)
       setData(response.data);
     }
     fetchNote();
@@ -59,7 +63,7 @@ export function MoviePreview() {
                 <img src={avatarUrl} alt={user.name} />
                 <span>Por {user.name}</span>
                 <Clock />
-                <span>{data.created_At}</span>
+                <span>{data.created_at}</span>
               </div>
               <div className="tags">
                 {data.tags.map((tag) => {

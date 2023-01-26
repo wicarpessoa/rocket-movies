@@ -27,12 +27,12 @@ export const Content = styled.div`
     text-align: justify;
     color: #999591;
     margin: 16px 0;
+    width: 100%;
 
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
   }
 `;

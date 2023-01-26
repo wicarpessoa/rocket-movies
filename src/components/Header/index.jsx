@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
 import { Link } from "react-router-dom";
 import { api } from "../../services/api";
+
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
+
 export function Header({handleChange}) {
   const navigate = useNavigate();
   const { signOut, user } = useAuth();
@@ -14,7 +17,7 @@ export function Header({handleChange}) {
   }
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
-    : avatarPlaceHolder;
+    : avatarPlaceholder;
   return (
     <Container>
       <h1>Rocket Movies</h1>

@@ -18,6 +18,7 @@ export function SignIn() {
   function handleSignIn() {
     signIn({ email, password });
   }
+  const signInDisabled = (!email | !password) ? true : false;
   return (
     <Container>
       <Form>
@@ -37,7 +38,7 @@ export function SignIn() {
           onChange={(e) => setPassword(e.target.value)}
           icon={Lock}
         />
-        <Button title="Entrar" onClick={handleSignIn} />
+        <Button title="Entrar" onClick={handleSignIn} disabled ={signInDisabled} />
         <Link to="/register">Criar conta</Link>
       </Form>
       <Background />

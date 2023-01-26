@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Envelope, Lock, User, ArrowLeft } from "phosphor-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { api } from "../../services/api";
 
@@ -16,7 +16,7 @@ export function SignUp() {
   const navigate = useNavigate();
 
   function handleGoBack() {
-    navigate(-1);
+    navigate("/");
   }
 
   function handleSignUp() {
@@ -64,10 +64,10 @@ export function SignUp() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button title="Cadastrar" onClick={handleSignUp} />
-        <button onClick={handleGoBack}>
+        <Link to="/">
           <ArrowLeft size={16} />
           Voltar para o login
-        </button>
+        </Link>
       </Form>
       <Background />
     </Container>
