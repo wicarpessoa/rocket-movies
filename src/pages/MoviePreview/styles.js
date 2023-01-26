@@ -31,7 +31,7 @@ export const Content = styled.div`
     flex-direction: column;
 
     padding: 0 24px 24px 0;
-    overflow-y: auto;
+    // overflow-y: auto;
     ::-webkit-scrollbar {
       width: 8px;
     }
