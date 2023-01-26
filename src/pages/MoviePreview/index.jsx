@@ -38,7 +38,6 @@ export function MoviePreview() {
   useEffect(() => {
     async function fetchNote() {
       const response = await api.get(`/notes/${params.id}`);
-      console.log(response.data.tags)
       setData(response.data);
     }
     fetchNote();

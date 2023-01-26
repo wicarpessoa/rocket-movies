@@ -37,7 +37,6 @@ export function Home() {
           </header>
           <MoviesNotes>
             {notes.map((note) => {
-              console.log(note)
               return (
                 <MovieNote key={note.id} to={`/details/${note.id}`}>
                   <h2>{note.title}</h2>

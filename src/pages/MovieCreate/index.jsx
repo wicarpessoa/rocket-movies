@@ -111,10 +111,10 @@ export function MovieCreate() {
           <label>
             <h3>Marcadores</h3>
             <MarkerContainer>
-              {tags.map((tag) => {
+              {tags.map((tag,index) => {
                 return (
                   <Marker
-                    key={tag.id}
+                    key={index}
                     value={tag}
                     onClick={() => handleRemoveTag(tag)}
                   />
