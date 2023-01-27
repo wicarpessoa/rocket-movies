@@ -15,10 +15,6 @@ export function SignUp() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  function handleGoBack() {
-    navigate("/");
-  }
-
   function handleSignUp() {
     if (!name || !email || !password) {
       return alert("Preencha todos os campos!");
